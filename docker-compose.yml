@@ -1,0 +1,16 @@
+version: '3'
+services:
+  service:
+    build: ./service
+    volumes:
+      - ./service:/usr/src/app
+    ports:
+      - 5001:3000
+  website:
+    image: nginx:alpine
+    volumes:
+      - ./website:/usr/share/nginx/html
+    ports:
+      - 5002:80
+    depends_on:
+      - service

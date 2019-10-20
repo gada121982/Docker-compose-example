@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <b>Docker test</b>
+    <ul>
+
+    </ul>
+    <script>
+        const ul = document.querySelector('ul'); 
+
+        fetch('http://localhost:5001/')
+        .then((res)=>{
+            return res.json(); 
+        })
+        .then((data)=>{
+            console.log("this is data" , data); 
+        })
+        .catch(err => console.log(err));
+        
+    </script>
+</body>
+</html>
